@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C653B8D3201554D60070E966 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C653B8D2201554D60070E966 /* GameKit.framework */; };
 		C6F12BA520140281001793B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F12BA420140281001793B6 /* AppDelegate.swift */; };
 		C6F12BA720140281001793B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F12BA620140281001793B6 /* ViewController.swift */; };
 		C6F12BAA20140281001793B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F12BA820140281001793B6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C653B8D2201554D60070E966 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		C6F12BA120140281001793B6 /* Dicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F12BA420140281001793B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F12BA620140281001793B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +31,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C653B8D3201554D60070E966 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C653B8D1201554D60070E966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C653B8D2201554D60070E966 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6F12B9820140281001793B6 = {
 			isa = PBXGroup;
 			children = (
 				C6F12BA320140281001793B6 /* Dicee */,
 				C6F12BA220140281001793B6 /* Products */,
+				C653B8D1201554D60070E966 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +109,11 @@
 					C6F12BA020140281001793B6 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -275,12 +292,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB3B4GR6LQ;
 				INFOPLIST_FILE = Dicee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.salehmajidov.Dicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salehmajidov.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,12 +307,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB3B4GR6LQ;
 				INFOPLIST_FILE = Dicee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.salehmajidov.Dicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salehmajidov.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
